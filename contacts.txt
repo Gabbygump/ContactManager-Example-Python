@@ -1,0 +1,3 @@
+Daniel,Moon,dm@example.com
+Chester,Copperbottom,cc@xample.com
+Alice,Liddel,al@example.com
