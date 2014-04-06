@@ -11,4 +11,4 @@ This repository does not contain any intentional issues to fix.
 ### Description ###
 This is a simple console based contact manager.  The manager will read contacts from a CSV file (fname, lname, email) and print, search, add, and delete contacts as well as write the contacts back to a file.
 
-The code is written in Python and contains the necessary files for an Eclipse project.  (This code was produced on Mac OS X 10.8.5 using Eclipse Kepler). 
+The code is written in Python.  This code was produced on Mac OS X 10.8.5 using JEdit 5.1.0.
