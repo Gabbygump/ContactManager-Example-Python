@@ -113,12 +113,13 @@ def checkInput(selected):
 # The Main function
 ####################
 
-readInContacts()
+if __name__ == "__main__":
+	readInContacts()
 
-while (quit == False):
-	Menus.printMainMenu()
-	try:
-		selection = int(input())
-		checkInput(selection)
-	except ValueError:
-		continue
+	while (quit == False):
+		Menus.printMainMenu()
+		try:
+			selection = int(input())
+			checkInput(selection)
+		except ValueError:
+			continue
