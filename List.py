@@ -59,32 +59,5 @@ class List:
 		return None
 		
 	def deletePerson(self, peep):
-		""" deletes the given person """
-		if peep is None:
-			print("Cannot delete this person")
-		else:
-			self.innerList.remove(peep)
-
-	def deletePersonByFirstName(self, fn):
-		""" Deletes a person from the list based on the first name """
-		toDelete = self.matchPersonByFirstName(fn)
-		if toDelete is None:
-			print("There is no one by this first name to delete:\t" + fn)
-		else:
-			self.innerList.remove(toDelete)
-		
-	def deletePersonByLastName(self, ln):
-		""" Deletes a person from the list based on the last name """
-		toDelete = self.matchPersonByLastName(ln)
-		if toDelete is None:
-			print("There is no one by this last name to delete:\t" + ln)
-		else:
-			self.innerList.remove(toDelete)
-		
-	def deletePersonByEmail(self, em):
-		""" Deletes a person from the list based on the email address """
-		toDelete = self.matchPersonByEmail(em)
-		if toDelete is None:
-			print("There is no one by this email to delete:\t" + em)
-		else:
-			self.innerList.remove(toDelete)
+		""" Deletes the given person. Cannot handle None. Check for None in calling function """
+		self.innerList.remove(peep)
