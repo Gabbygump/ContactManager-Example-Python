@@ -59,5 +59,11 @@ class List:
 		return None
 		
 	def deletePerson(self, peep):
-		""" Deletes the given person. Cannot handle None. Check for None in calling function """
-		self.innerList.remove(peep)
+		""" Deletes the given person. 
+		Returns -1 if there is no one to delete. 
+		Returns 0 if it was able to delete someone. """
+		if peep is None:
+			return -1
+		else:
+			self.innerList.remove(peep)
+			return 0
