@@ -25,12 +25,12 @@ def readInContacts():
 def printContactsToFile():
 	""" Print the contacts to a file.  Will loop until get a good file name """
 	while True:
-		print "File Name"
+		print("File Name")
 		fn = raw_input()
 		try:
 			file = open(fn, 'w')
 			contactList.printToFile(file)
-			print "Contacts written to " + fn
+			print("Contacts written to " + fn)
 			break
 		except IOError:
 			continue
@@ -38,11 +38,11 @@ def printContactsToFile():
 def addNewContact():
 	""" Adds a new contact to the contact manager. Does no error checking """
 	global contactList
-	print "First Name:",
+	print("First Name:",)
 	fn = raw_input()
-	print "Last Name:",
+	print("Last Name:",)
 	ln = raw_input()
-	print "Email:",
+	print("Email:",)
 	email = raw_input()
 	peep = Person(fn, ln, email)
 	contactList.addPerson(peep)
@@ -51,7 +51,7 @@ def addNewContact():
 def handleFoundPerson(person, option):
 	""" Error checks person.  Prints it or an error """
 	if person is None:
-		print "No one matches that criteria"
+		print("No one matches that criteria")
 	elif option == "search":
 		person.printToScreen()
 	elif option == "delete":
@@ -75,7 +75,7 @@ def checkSearchInput(selected, option):
 		peep = contactList.matchPersonByEmail(searchStr)
 		handleFoundPerson(peep, option)
 	else:
-		print "That is not a valid selection"
+		print("That is not a valid selection")
 
 
 def searchForPerson(option):
@@ -87,7 +87,7 @@ def searchForPerson(option):
 			checkSearchInput(selection, option)
 			break
 		except ValueError:
-			print "Numbers only.  Try again"
+			print("Numbers only.  Try again")
 			continue
 
 def checkInput(selected):

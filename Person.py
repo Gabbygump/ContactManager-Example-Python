@@ -22,7 +22,7 @@ class Person:
         """ Prints the person information to the screen """
         formatted = '\t' + self.firstName + '\t\t' + self.lastName + \
             '\t\t' + self.email
-        print formatted
+        print(formatted)
 
     def printToFile(self, fn):
         """ Prints the person information to the given file, fn """
