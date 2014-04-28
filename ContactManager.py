@@ -26,7 +26,7 @@ def printContactsToFile():
 	""" Print the contacts to a file.  Will loop until get a good file name """
 	while True:
 		print("File Name")
-		fn = raw_input()
+		fn = input()
 		try:
 			file = open(fn, 'w')
 			contactList.printToFile(file)
@@ -39,11 +39,11 @@ def addNewContact():
 	""" Adds a new contact to the contact manager. Does no error checking """
 	global contactList
 	print("First Name:",)
-	fn = raw_input()
+	fn = input()
 	print("Last Name:",)
-	ln = raw_input()
+	ln = input()
 	print("Email:",)
-	email = raw_input()
+	email = input()
 	peep = Person(fn, ln, email)
 	contactList.addPerson(peep)
 
@@ -61,17 +61,17 @@ def checkSearchInput(selected, option):
 	""" Handles the input for searching. """
 	if selected == 0:
 		Menus.printSearchCriteria("First Name")
-		searchStr = raw_input()
+		searchStr = input()
 		peep = contactList.matchPersonByFirstName(searchStr)
 		handleFoundPerson(peep, option)
 	elif selected == 1:
 		Menus.printSearchCriteria("Last Name")
-		searchStr = raw_input()
+		searchStr = input()
 		peep = contactList.matchPersonByLastName(searchStr)
 		handleFoundPerson(peep, option)
 	elif selected == 2:
 		Menus.printSearchCriteria("Email")
-		searchStr = raw_input()
+		searchStr = input()
 		peep = contactList.matchPersonByEmail(searchStr)
 		handleFoundPerson(peep, option)
 	else:
@@ -83,7 +83,7 @@ def searchForPerson(option):
 	Menus.printSearchMenu()
 	while True:
 		try:
-			selection = int(raw_input())
+			selection = int(input())
 			checkSearchInput(selection, option)
 			break
 		except ValueError:
@@ -118,7 +118,7 @@ readInContacts()
 while (quit == False):
 	Menus.printMainMenu()
 	try:
-		selection = int(raw_input())
+		selection = int(input())
 		checkInput(selection)
 	except ValueError:
 		continue
